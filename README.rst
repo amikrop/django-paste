@@ -5,20 +5,24 @@ Pluggable, configurable, pastebin HTTP REST API
 -----------------------------------------------
 
 .. image:: https://img.shields.io/pypi/v/django-paste.svg
-    :target: https://pypi.org/project/django-paste/
-    :alt: PyPI
+   :target: https://pypi.org/project/django-paste/
+   :alt: PyPI
 
 .. image:: https://img.shields.io/pypi/l/django-paste.svg
-    :target: https://pypi.org/project/django-paste/
-    :alt: PyPI - License
+   :target: https://pypi.org/project/django-paste/
+   :alt: PyPI - License
 
 .. image:: https://img.shields.io/pypi/pyversions/django-paste.svg
-    :target: https://pypi.org/project/django-paste/
-    :alt: PyPI - Python Version
+   :target: https://pypi.org/project/django-paste/
+   :alt: PyPI - Python Version
+
+.. image:: https://travis-ci.org/amikrop/django-paste.svg?branch=master
+   :target: https://travis-ci.org/amikrop/django-paste/
+   :alt: Build Status
 
 .. image:: https://readthedocs.org/projects/django-paste/badge/?version=latest
-    :target: https://django-paste.readthedocs.io/en/latest/?badge=latest
-    :alt: Documentation Status
+   :target: https://django-paste.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
 
 *django-paste* is a simple `Django <https://www.djangoproject.com/>`_
 pluggable app of a code pasting and highlighting HTTP REST API, written using
