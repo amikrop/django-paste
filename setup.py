@@ -13,7 +13,7 @@ with open('README.rst') as f:
 
 
 setup(
-    name='paste',
+    name='django-paste',
     version=version,
     description='Pluggable, configurable, pastebin HTTP REST API',
     long_description=long_description,
