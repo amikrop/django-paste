@@ -17,13 +17,13 @@ Installation
 
 The following Python versions are supported:
 
-    - CPython: 3.6, 3.7, 3.8, 3.9
-    - PyPy: 3.6
+- CPython: 3.6, 3.7, 3.8, 3.9
+- PyPy: 3.6
 
 Django:
 
-    - 2.0, 2.1, 2.2
-    - 3.0, 3.1
+- 2.0, 2.1, 2.2
+- 3.0, 3.1
 
 - Install via `pip
   <https://packaging.python.org/tutorials/installing-packages/>`_:
