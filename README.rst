@@ -66,10 +66,10 @@ Usage
 -----
 
 You can find the description of the app's `endpoints
-<https://django-paste.readthedocs.io/en/latest/endpoints.html>`_ and snippet
-`fields <https://django-paste.readthedocs.io/en/latest/fields.html>`_ in the
-`documentation <https://django-paste.readthedocs.io/en/latest/>`_. You can
-also manage snippets at the Django admin site.
+<https://django-paste.readthedocs.io/en/latest/api.html#endpoints>`_ and
+snippet `fields <https://django-paste.readthedocs.io/en/latest/fields.html>`_
+in the `documentation <https://django-paste.readthedocs.io/en/latest/>`_. You
+can also manage snippets at the Django admin site.
 
 License
 -------
