@@ -3,12 +3,15 @@ dist: xenial
 language: python
 
 python:
-  - '3.6'
-  - '3.7'
-  - '3.8'
-  - '3.9'
-  - 'pypy3'
+    - '3.6'
+    - '3.7'
+    - '3.8'
+    - '3.9'
+    - 'pypy3'
 
 install: pip install tox-travis
 
 script: tox
+
+after_success:
+    - bash <(curl -s https://codecov.io/bash)
