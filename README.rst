@@ -16,6 +16,11 @@ Pluggable, configurable, pastebin HTTP REST API
    :target: https://pypi.org/project/django-paste/
    :alt: PyPI - Python Version
 
+.. image:: https://codecov.io/gh/amikrop/django-paste/branch/master/graph/
+           badge.svg
+    :target: https://codecov.io/gh/amikrop/django-paste/
+    :alt: Coverage
+
 .. image:: https://travis-ci.org/amikrop/django-paste.svg?branch=master
    :target: https://travis-ci.org/amikrop/django-paste/
    :alt: Build Status
