@@ -14,8 +14,8 @@ settings file, whith any of the following keys:
    :type: ``bool``
    :default: ``True``
 
-   Whether the title of a snippet should be included in its highlight view, in
-   case the relative field is not set for it.
+   Whether the title of a snippet should be included in its full highlight
+   view, in case the relative field is not set for it.
 
 .. confval:: DEFAULT_LANGUAGE
 

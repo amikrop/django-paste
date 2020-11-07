@@ -19,11 +19,11 @@ class SnippetTestCaseMixin:
         cls.user = create_user('user')
         cls.staff_user = create_user('staff', is_staff=True)
 
-    def get(self, **kwargs):
-        """Send a GET request to the view's URL with given kwargs and return
-        the response.
+    def get(self, query_string='', **kwargs):
+        """Send a GET request to the view's URL, appending given query string,
+        with given kwargs, and return the response.
         """
-        return self.client.get(self.url(**kwargs))
+        return self.client.get(self.url(**kwargs) + query_string)
 
     def assert_status(self, method_name, status_code, **kwargs):
         """Assert that a request to the view's URL with given kwargs its type

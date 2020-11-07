@@ -51,7 +51,8 @@ The rest of the fields are optional, except for :confval:`content`.
    :type: boolean
    :default: *from settings*
 
-   Whether the title of the snippet should be included in its highlight view.
+   Whether the title of the snippet should be included in its full highlight
+   view.
 
 .. confval:: private
 

@@ -20,7 +20,7 @@ class SnippetListTestCase(SnippetListTestCaseMixin, APITestCase):
 
     def post(self, **kwargs):
         """Send a POST request to the view's URL with data indicated by given
-        kwargs, as JSON, using the proper content-type and return the
+        kwargs, as JSON, using the proper content-type, and return the
         response.
         """
         return self.client.post(

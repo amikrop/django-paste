@@ -34,5 +34,5 @@ class SnippetPermissions(permissions.BasePermission):
         """
         user = request.user
         return (
-            request.method in permissions.SAFE_METHODS and not obj.private
-            or obj.owner == user or user.is_staff)  # type: ignore
+            request.method in permissions.SAFE_METHODS  # type: ignore
+            and not obj.private or obj.owner == user or user.is_staff)

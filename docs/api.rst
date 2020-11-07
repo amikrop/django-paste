@@ -8,29 +8,30 @@ Endpoints
 
    *Snippet list*
 
-   :GET: List viewable snippets
-   :POST: Create new snippet
+   :GET: List viewable snippets.
+   :POST: Create new snippet.
 
 .. confval:: /{snippet-id}/
 
    *Snippet detail*
 
-   :GET: View queried snippet
-   :PUT: Update queried snippet
-   :PATCH: Partially update queried snippet
-   :DELETE: Delete queried snippet
+   :GET: View queried snippet.
+   :PUT: Update queried snippet.
+   :PATCH: Partially update queried snippet.
+   :DELETE: Delete queried snippet.
 
 .. confval:: /user/{user-id}/
 
    *User snippet list*
 
-   :GET: List queried user's viewable snippets
+   :GET: List queried user's viewable snippets.
 
 .. confval:: /{snippet-id}/highlight/
 
    *Snippet highlight*
 
-   :GET: View an HTML page of queried snippet's highlighted content
+   :GET: View queried snippet's highlighted content, as HTML. If ``full``
+         exists as a query parameter, get a full HTML document.
 
 Content Types
 -------------

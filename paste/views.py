@@ -5,6 +5,7 @@ from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.generics import get_object_or_404
 from rest_framework.renderers import StaticHTMLRenderer
+from rest_framework.request import Request
 from rest_framework.response import Response
 
 from pygments import highlight
@@ -57,8 +58,10 @@ class SnippetViewSet(viewsets.ModelViewSet):
         serializer.save(**kwargs)
 
     @action(detail=True, renderer_classes=[StaticHTMLRenderer])
-    def highlight(self, *args, **kwargs) -> Response:
-        """Highlight and return the snippet's content as HTML."""
+    def highlight(self, request: Request, **kwargs) -> Response:
+        """Highlight and return the snippet's content as HTML. If `full`
+        exists as a query parameter, send a full HTML document.
+        """
         instance = self.get_object()
 
         if instance.language:
@@ -72,10 +75,17 @@ class SnippetViewSet(viewsets.ModelViewSet):
         options = (
             {'title': instance.title} if instance.title
             and instance.embed_title else {})
-        formatter = HtmlFormatter(
-            style=style, full=True, linenos=instance.line_numbers, **options)
+        full = 'full' in request.query_params
 
-        return Response(highlight(instance.content, lexer, formatter))
+        formatter = HtmlFormatter(
+            style=style, full=full, linenos=instance.line_numbers, **options)
+        html = highlight(instance.content, lexer, formatter)
+
+        if not full:
+            css = formatter.get_style_defs()
+            html = f'<style type="text/css">{css}</style>{html}'
+
+        return Response(html)
 
     @action(detail=False, url_path='user/(?P<pk>[^/.]+)')
     def user(self, *args, pk: str, **kwargs) -> Response:
