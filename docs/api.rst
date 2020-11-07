@@ -47,5 +47,5 @@ It can render its responses in the following formats:
     - text/html
 
 A client can request the response in a specific format either by sending an
-``Accept`` header, or by appending ``.json`` or ``.api`` for JSON and HTML
-content, respectively.
+``Accept`` header, or by appending ``.json`` or ``.api`` to the URL, for JSON
+and HTML content, respectively.
