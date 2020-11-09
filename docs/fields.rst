@@ -9,7 +9,16 @@ and hence clients are not supposed to explicitly provide them:
     - :confval:`updated`
     - :confval:`owner`
 
-The rest of the fields are optional, except for :confval:`content`.
+The rest of the fields are optional, except for :confval:`content`:
+
+    - :confval:`content`
+    - :confval:`language`
+    - :confval:`style`
+    - :confval:`line_numbers`
+    - :confval:`embed_title`
+    - :confval:`private`
+
+In more detail:
 
 .. confval:: id
 
@@ -42,14 +51,14 @@ The rest of the fields are optional, except for :confval:`content`.
 .. confval:: line_numbers
 
    :type: boolean
-   :default: *from settings*
+   :default: :confval:`DEFAULT_LINE_NUMBERS`
 
    Whether line numbers should be shown in the snippet's highlight view.
 
 .. confval:: embed_title
 
    :type: boolean
-   :default: *from settings*
+   :default: :confval:`DEFAULT_EMBED_TITLE`
 
    Whether the title of the snippet should be included in its full highlight
    view.
@@ -57,7 +66,7 @@ The rest of the fields are optional, except for :confval:`content`.
 .. confval:: private
 
    :type: boolean
-   :default: *from settings*
+   :default: :confval:`DEFAULT_PRIVATE`
 
    Whether the snippet should be only viewable by its owner and staff users.
 
