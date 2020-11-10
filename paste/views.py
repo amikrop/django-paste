@@ -26,6 +26,7 @@ class SnippetViewSet(viewsets.ModelViewSet):
     - User snippet list: /user/{user-id}/ (GET)
     - Snippet highlight: /{snippet-id}/highlight/ (GET)
     """
+
     queryset = Snippet.objects.all()
     serializer_class = SnippetSerializer
     permission_classes = [SnippetPermissions]
@@ -41,7 +42,6 @@ class SnippetViewSet(viewsets.ModelViewSet):
             return queryset
 
         query = Q(private=False) if constants.LIST_FOREIGN else Q(pk__in=[])
-
         if user.is_authenticated:
             query |= Q(owner=user)
 
@@ -80,7 +80,6 @@ class SnippetViewSet(viewsets.ModelViewSet):
         formatter = HtmlFormatter(
             style=style, full=full, linenos=instance.line_numbers, **options)
         html = highlight(instance.content, lexer, formatter)
-
         if not full:
             css = formatter.get_style_defs()
             html = f'<style type="text/css">{css}</style>{html}'
@@ -88,7 +87,7 @@ class SnippetViewSet(viewsets.ModelViewSet):
         return Response(html)
 
     @action(detail=False, url_path='user/(?P<pk>[^/.]+)')
-    def user(self, *args, pk: str, **kwargs) -> Response:
+    def user(self, request: Request, pk: str, **kwargs) -> Response:
         """Return snippets belonging to user indicated by the ID in the URL.
         """
         User = get_user_model()

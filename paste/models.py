@@ -22,6 +22,7 @@ class Snippet(models.Model):
     """A source code snippet with its highlighting and privacy options. May be
     owned by a user.
     """
+
     LANGUAGE_CHOICES = sorted([(item[1][0], item[0]) for item in _lexers])
     STYLE_CHOICES = sorted([(item, item) for item in get_all_styles()])
 
