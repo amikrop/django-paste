@@ -9,6 +9,7 @@ from tests.utils import constant, create_snippet, create_user
 
 class SnippetUserTestCase(SnippetListTestCaseMixin, APITestCase):
     """Tests for the user snippet list view."""
+
     not_allowed = SnippetListTestCaseMixin.not_allowed + ['post']
 
     def setUp(self):

@@ -10,6 +10,7 @@ from tests.utils import constant, create_snippet, create_user
 
 class SnippetTestCaseMixin:
     """Snippet test case common state and behavior."""
+
     constants = []
 
     @classmethod
@@ -67,6 +68,7 @@ class SnippetTestCaseMixin:
 
 class SnippetDetailTestCaseMixin(SnippetTestCaseMixin):
     """Snippet detail-like test case common state and behavior."""
+
     safe_expected = ([[
         [status.HTTP_200_OK, status.HTTP_403_FORBIDDEN],
         [status.HTTP_200_OK] * 2, [status.HTTP_200_OK] * 2]] * 3)
@@ -86,6 +88,7 @@ class _SnippetPagination(CursorPagination):
 
 class SnippetListTestCaseMixin(SnippetTestCaseMixin):
     """Snippet list-like test case common state and behavior."""
+
     not_allowed = ['delete', 'patch', 'put', 'trace']
     constants = ['FORBID_ANONYMOUS_LIST', 'FORBID_LIST']
     _list_expected = [

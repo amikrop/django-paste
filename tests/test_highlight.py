@@ -50,6 +50,7 @@ def _is_full(response):
 
 class SnippetHighlightTestCase(SnippetDetailTestCaseMixin, APITestCase):
     """Tests for the snippet highlight view."""
+
     name = 'highlight'
     not_allowed = ['delete', 'patch', 'post', 'put', 'trace']
 

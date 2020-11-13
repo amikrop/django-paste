@@ -11,6 +11,7 @@ from tests.utils import create_snippet, create_user
 
 class SnippetDetailTestCase(SnippetDetailTestCaseMixin, APITestCase):
     """Tests for the snippet detail view."""
+
     name = 'detail'
     not_allowed = ['post', 'trace']
 
