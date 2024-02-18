@@ -5,7 +5,7 @@ Settings
    Every time you change settings related to the database, you should then
    generate and run database migrations.
 
-All the settings of *django-admin* have default values, which can get
+All the settings of *django-paste* have default values, which can get
 overriden. This is done by defining a ``PASTE`` dict in your Django project's
 settings file, whith any of the following keys:
 
