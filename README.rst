@@ -21,10 +21,6 @@ Pluggable, configurable, pastebin HTTP REST API
     :target: https://codecov.io/gh/amikrop/django-paste/
     :alt: Coverage
 
-.. image:: https://travis-ci.org/amikrop/django-paste.svg?branch=master
-   :target: https://travis-ci.org/amikrop/django-paste/
-   :alt: Build Status
-
 .. image:: https://readthedocs.org/projects/django-paste/badge/?version=latest
    :target: https://django-paste.readthedocs.io/en/latest/?badge=latest
    :alt: Documentation Status
